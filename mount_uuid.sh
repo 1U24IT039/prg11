@@ -8,21 +8,24 @@
 
 
 # Display filesystem UUID
+lsblk -f
+# Alternative command: sudo blkid
 
 
 
 
 # Create mount directory
+sudo mkdir -p /mnt/mydata
 
 
 
 
 # Mount filesystem using UUID
 # Replace YOUR_UUID with actual UUID
+sudo mount UUID="YOUR_UUID" /mnt/mydata
 
 
 
 
 # Display mounted filesystem
-
-
+df -h /mnt/mydata
